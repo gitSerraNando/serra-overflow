@@ -1,0 +1,27 @@
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="correo electronico"
+      formControlName="email"
+      id="email"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Contraseña"
+      formControlName="password"
+      id="password"
+      type="password"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="accent" type="submit">Iniciar sesion</button>
+  <p style="text-align: center">
+    ¿Eres nuevo?
+    <a mat-button color="primary" [routerLink]="['/signup']">
+      Crear usuario
+    </a>
+  </p>
+</form>
